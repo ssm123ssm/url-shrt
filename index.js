@@ -25,7 +25,7 @@ app.get('/new/*', function(req, res){
                  //res.send(ret);
                 res.setHeader('Content-Type', 'application/json');
                 rett.push((ret));
-                res.send(rett);
+                res.send(ret);
                 rett = [];
             }
             else{
@@ -41,8 +41,8 @@ app.get('/new/*', function(req, res){
                 ret.url = val;
                res.setHeader('Content-Type', 'application/json');
                 rett.push((ret));
-                res.send(rett);
-                    rett= [];
+                res.send(ret);
+                rett= [];
                     
         });
         
