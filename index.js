@@ -1,7 +1,7 @@
 var express = require('express');
 var mongo = require('mongodb').MongoClient;
 var ret = {url:null, shortened:null};
-var db_url = 'mongodb://ssm123ssm:chandrani123@ds117592.mlab.com:17592/data';
+var db_url = MONGOLAB_URI;
 var sh;
 var app = express();
 
