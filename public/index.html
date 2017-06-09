@@ -17,7 +17,7 @@
     <div class="container-fluid">
         
         <div class="des row justify-content-center"></div>
-    <div class="col-10 col-md-8 mx-auto">
+    <div class="col-12 col-md-8 mx-auto">
         <ul class="mx-auto">
         <li><span>User Story: </span>I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.
             
@@ -33,7 +33,7 @@
         </ul>
         </div>
         
-        <div class="row justify-content-center m-5"><div class="col-10 col-md-8 mx-auto">An example request:<br>
+        <div class="row justify-content-center m-5"><div class="col-12 col-md-8 mx-auto ex"><h4>An example request:</h4>
             Make sure you enter the URL to be shortened after <code>new/</code><br>
             Ex: <code>https://sh-u.herokuapp.com/new/https://www.freecodecamp.com</code><br>
             would return <code>{"url":"https://www.freecodecamp.com","shortened":"https://sh-u.herokuapp.com/4"}</code>
@@ -42,13 +42,14 @@
     
     <h3 class="text-center">Try it here...</h3>
     
-    <div class="row justify-content-center"><div class="col-10">
+    <div class="row justify-content-center"><div class="col-10 try">
         <form>
             
-            <div class="row"><div class="col-8"><div class="form-group">
+            <div class="row justify-content-center"><div class="col-8 col-sm-5"><div class="form-group">
         <label for="fullUrl">Enter URL here</label>
         <input type="text" class="form-control" id="fullUrl" placeholder="Full URL to be shortened">    
-        </div></div><div class="col-4"><button type="button" class="btn btn-default sub">Shorten!</button></div></div>
+        </div></div><div class="col-4 col-sm-3"><button type="button" class="btn btn-default sub">Shorten!</button></div></div>
+            <div class="row justify-content-center"><div class="col-8 col-sm-5"><div class="shrt"></div></div><div class="col-4 col-sm-3"></div> </div>
     
         
     
@@ -58,8 +59,10 @@
         </div></div>
     
     <div class="row justify-content-center"><div class="col-10">
-         <div class="shrt"></div>
+         
         </div></div>
+    
+    <div class="footer text-center">created by ssm123ssm</div>
    
     
     

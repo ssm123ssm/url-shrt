@@ -24,7 +24,28 @@ ul{
     
 }
 
+
+
 .sub{
     position: relative;
     top:30px
+}
+.shrt{
+    
+}
+
+.footer{
+    margin:20px;
+    padding-top:20px;
+    border-top:1px solid grey;
+    font-size:15px;
+        
+}
+
+.try{
+        padding-top: 20px;
+    border: 1px solid #5474af;
+    border-radius: 7px;
+    /* padding-bottom: 22px; */
+    background-color: rgba(109, 157, 222, 0.62);
 }

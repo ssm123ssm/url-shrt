@@ -17,7 +17,7 @@ $(document).ready(function(){
                     success: function(data){
                         
                    // alert(data.shortened);
-                        var ap = "<a target=\"_blank\" href=\"" + data.shortened + "\"a>" + data.shortened + "</a>"
+                        var ap = "<code><a target=\"_blank\" href=\"" + data.shortened + "\"a>" + data.shortened + "</a></code>"
                         $(".shrt").html(ap);
                     }
                 });
