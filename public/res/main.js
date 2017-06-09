@@ -1,13 +1,15 @@
 $(document).ready(function(){
     
     $(".sub").click(function(){
-        var url = "https://sh-u.herokuapp.com/new/" + $("#fullUrl").val() +"?callback=?";
+        var url1 = "https://sh-u.herokuapp.com/new/" + $("#fullUrl").val() +"?jsoncallback=?";
         
-        $.getJSON(url, function(json){
-            console.log(json[0]);
+        console.log(url1);
+        
+        $.getJSON(url1, function(json){
+            console.log(json);
         });
-        console.log(url);
-    });
     
+    
+});
     
 });
