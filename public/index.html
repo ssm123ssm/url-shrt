@@ -1,7 +1,7 @@
 <html>
 <head>
 
-    <title>timeStaMs</title>
+    <title>sh-u</title>
      <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -13,20 +13,31 @@
 </head>
 <body>
     
-    <div class="heading"><h2 class="text-center sec ">A Timestamp API - "TimeStaMs"</h2></div>
+    <div class="heading"><h2 class="text-center sec ">"Sh-U", A URL Shortener</h2></div>
     <div class="container-fluid">
         
         <div class="des row justify-content-center"></div>
     <div class="col-10 col-md-8 mx-auto">
         <ul class="mx-auto">
-        <li><span>User Story: </span>I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016).</li>
+        <li><span>User Story: </span>I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.
+            
+  
+             
+            
+            </li>
             <li>
-<span>User Story: </span> If it does, it returns both the Unix timestamp and the natural language form of that date.</li>
+<span>User Story: </span> When I visit that shortened URL, it will redirect me to my original link.</li>
         
             
             <li><span>User Story: </span> If it does not contain a date or Unix timestamp, it returns null for those properties.</li>
         </ul>
         </div>
+        
+        <div class="row justify-content-center mt-5"><div class="col-10 col-md-8 mx-auto">An example request:<br>
+            Make sure you enter the URL to be shortened after <code>new/</code><br>
+            Ex: <code>https://sh-u.herokuapp.com/new/https://www.freecodecamp.com</code><br>
+            would return <code>{"url":"https://www.freecodecamp.com","shortened":"https://sh-u.herokuapp.com/4"}</code>
+           </div></div>
     </div>
     
     

@@ -21,7 +21,7 @@ app.get('/new/*', function(req, res){
             if(ress.length > 0){
                 console.log("Already shrtened: " + ress[0].shrt);
                 ret.url = val;
-                ret.shortened = ress[0].shrt;      
+                ret.shortened = "https://sh-u.herokuapp.com/" + ress[0].shrt;      
                  res.send(ret);
             }
             else{
@@ -30,7 +30,7 @@ app.get('/new/*', function(req, res){
                 sh = ress[0]["give"];
                 console.log("to be given: " + (sh+1));
                     sh++;
-                     ret.shortened = sh;
+                     ret.shortened = "https://sh-u.herokuapp.com/" + sh;
                     
                     col.update({last:1},{last:1, give:sh},function(err, res){});
                 col.insert({url:val, shrt:sh});
