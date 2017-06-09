@@ -1,10 +1,12 @@
 var express = require('express');
 var mongo = require('mongodb').MongoClient;
 var ret = {url:null, shortened:null};
-var db_url = MONGOLAB_URI;
+var db_url = 'mongodb://ssm123ssm:chandrani123@ds117592.mlab.com:17592/data';
 var sh;
 var app = express();
 
+
+ap.use(express.static("/public"));
 app.get('/new/*', function(req, res){
     //console.log(req.params[0]);
     var val = form(req.params[0]);
