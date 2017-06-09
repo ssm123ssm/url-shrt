@@ -4,6 +4,7 @@ $(document).ready(function(){
         var url1 = "https://sh-u.herokuapp.com/new/" + $("#fullUrl").val();
         
         console.log(url1);
+        $(".shrt").html("wait...");
        /* 
         $.getJSON(url1, function(json){
             console.log(json);
@@ -13,9 +14,11 @@ $(document).ready(function(){
          $.ajax({
                     url: "https://sh-u.herokuapp.com/new/" + $("#fullUrl").val(),
                     dataType: 'jsonp',
-                    success: function(dataWeGotViaJsonp){
+                    success: function(data){
                         
-                    console.log(dataWeGotViaJsonp);
+                   // alert(data.shortened);
+                        var ap = "<a target=\"_blank\" href=\"" + data.shortened + "\"a>" + data.shortened + "</a>"
+                        $(".shrt").html(ap);
                     }
                 });
     
