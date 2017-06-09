@@ -6,7 +6,7 @@ var sh;
 var app = express();
 
 
-app.use(express.static("/public"));
+app.use(express.static("public"));
 app.get('/new/*', function(req, res){
     //console.log(req.params[0]);
     var val = form(req.params[0]);
