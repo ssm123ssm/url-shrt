@@ -4,7 +4,7 @@ var ret = {url:null, shortened:null};
 var db_url = process.env.MONGOLAB_URI;
 var sh;
 var app = express();
-
+var rett = [];
 
 app.use(express.static("public"));
 app.get('/new/*', function(req, res){
@@ -24,7 +24,9 @@ app.get('/new/*', function(req, res){
                 ret.shortened = "https://sh-u.herokuapp.com/" + ress[0].shrt;      
                  //res.send(ret);
                 res.setHeader('Content-Type', 'application/json');
-                res.send(JSON.stringify(ret));
+                rett.push(JSON.stringify(ret));
+                res.send(rett);
+                rett = [];
             }
             else{
                 col.find({last:1}).toArray(function(err, ress){
@@ -38,7 +40,9 @@ app.get('/new/*', function(req, res){
                 col.insert({url:val, shrt:sh});
                 ret.url = val;
                res.setHeader('Content-Type', 'application/json');
-                res.send(JSON.stringify(ret));
+                rett.push(JSON.stringify(ret));
+                res.send(rett);
+                    rett= [];
                     
         });
         
