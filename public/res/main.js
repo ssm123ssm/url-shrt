@@ -4,7 +4,7 @@ $(document).ready(function(){
         var url = "https://sh-u.herokuapp.com/new/" + $("#fullUrl").val() +"?callback=?";
         console.log(url);
         $.getJSON(url, function(json){
-            console.log(json.toString());
+            console.log(json);
         });
     });
     

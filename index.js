@@ -24,7 +24,7 @@ app.get('/new/*', function(req, res){
                 ret.shortened = "https://sh-u.herokuapp.com/" + ress[0].shrt;      
                  //res.send(ret);
                 res.setHeader('Content-Type', 'application/json');
-                rett.push(JSON.stringify(ret));
+                rett.push((ret));
                 res.send(rett);
                 rett = [];
             }
@@ -40,7 +40,7 @@ app.get('/new/*', function(req, res){
                 col.insert({url:val, shrt:sh});
                 ret.url = val;
                res.setHeader('Content-Type', 'application/json');
-                rett.push(JSON.stringify(ret));
+                rett.push((ret));
                 res.send(rett);
                     rett= [];
                     
