@@ -1,7 +1,7 @@
 $(document).ready(function(){
     
     $(".sub").click(function(){
-        var url1 = "https://sh-u.herokuapp.com/new/" + $("#fullUrl").val() +"?jsoncallback=?";
+        var url1 = "https://sh-u.herokuapp.com/new/" + $("#fullUrl").val();
         
         console.log(url1);
         
