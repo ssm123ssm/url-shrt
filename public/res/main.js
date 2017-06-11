@@ -4,23 +4,46 @@ $(document).ready(function(){
         var url1 = "https://sh-u.herokuapp.com/new/" + $("#fullUrl").val();
         
         console.log(url1);
-        $(".shrt").html("wait...");
-       /* 
-        $.getJSON(url1, function(json){
-            console.log(json);
-            $(".shrt").html(json);
-        });
-        */
-         $.ajax({
-                    url: "https://sh-u.herokuapp.com/new/" + $("#fullUrl").val(),
+        if (isValid($("#fullUrl").val())){
+            getIt();
+        }
+        
+        else{
+            alertInvalid();
+        }
+        
+    
+
+         
+        function isValid(url){
+            //alert(url); 
+            if(url.indexOf("http") < 0 && url.indexOf("www") <0){
+                return false;
+            }
+            
+            
+            return true;
+        }
+        function alertInvalid(){
+            $(".fin, .wait").addClass("d-none");
+            $(".invalid").removeClass("d-none");
+        }
+        function getIt(){
+            $(".wait").removeClass("d-none");
+            $(".fin, .invalid").addClass("d-none");
+            $.ajax({
+                    url: url1,
                     dataType: 'jsonp',
                     success: function(data){
                         
                    // alert(data.shortened);
-                        var ap = "<code><a target=\"_blank\" href=\"" + data.shortened + "\"a>" + data.shortened + "</a></code>"
-                        $(".shrt").html(ap);
+                        $(".wait").addClass("d-none");
+                        $(".fin").removeClass("d-none");
+                        var ap = "<a target=\"_blank\" class=\"alert-link\" href=\"" + data.shortened + "\"a>" + data.shortened + "</a>"
+                        $(".shrt-url").html(ap);
                     }
                 });
+        }
     
     
 });
