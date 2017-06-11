@@ -1,7 +1,19 @@
 $(document).ready(function(){
     
     $(".sub").click(function(){
-        var url1 = "https://sh-u.herokuapp.com/new/" + $("#fullUrl").val();
+        
+    doo();
+    
+});
+    $(document).keyup(function(e) {
+    if (e.which == 13) {
+      //doo();
+    } 
+  });
+});
+
+function doo(){
+    var url1 = "https://sh-u.herokuapp.com/new/" + $("#fullUrl").val();
         
         console.log(url1);
         if (isValid($("#fullUrl").val())){
@@ -44,9 +56,7 @@ $(document).ready(function(){
                     }
                 });
         }
-    
-    
+}
+$(".fr").submit(function(e) {
+    e.preventDefault();
 });
-    
-});
-
